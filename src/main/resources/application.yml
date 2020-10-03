@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: demo client
+  boot:
+    admin:
+      client:
+        url: http://localhost:9999
+        management:
+          endpoints:
+            health:
+              show-details: always
+
+
