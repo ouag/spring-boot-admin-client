@@ -8,6 +8,24 @@ spring:
         management:
           endpoints:
             health:
-              show-details: always
+              show-details: "always"
 
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    git:
+      enabled: true
+      mode: FULL
+
+
+auth:
+  service:
+    unprotectedpath:
+      - /actuator/**
+      - actuator/**
 
